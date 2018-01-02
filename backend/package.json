@@ -1,0 +1,61 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for start a project with nodejs/express",
+  "main": "src/server.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "start": "node lib/server.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "babel-node": "./node_modules/.bin/babel-node src/server.js",
+    "nodemon": "nodemon --exec npm run babel-node -- src/server.js",
+    "build": "npm run clean && mkdir -p lib && ./node_modules/.bin/babel src -s -D -d lib",
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint"
+  },
+  "keywords": [
+    "express",
+    "babel",
+    "boilerplate",
+    "scaffold",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "jest",
+    "eslint"
+  ],
+  "author": "Rafael Bastiani <rafacdb@gmail.com> (https://rafaelbastiani.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bastiani/nodejs-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bastiani/nodejs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Bastiani/nodejs-boilerplate#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
+    "koa-graphql": "^0.7.3",
+    "koa-router": "^7.3.0",
+    "mongoose": "^5.0.0-rc0"
+  }
+}
