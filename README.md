@@ -6,7 +6,10 @@ I use this for learning and document all process.
 The _frontend_ is created with create-react-app and _backend_ with my [boilerplate](https://github.com/Bastiani/nodejs-boilerplate) but change express to koa.
 
 Ok let's go!
-On _frontend_ install:
+
+_frontend_ steps:
+
+install:
 
 * `npm i react-relay`
 * `npm i --save-dev babel-plugin-relay relay-compiler`
@@ -21,7 +24,9 @@ Create file `.babelrc` and insert:
 }
 ```
 
-On _backend_ i change dependencies from my boilerplate to:
+_backend_ steps:
+
+i change dependencies from my boilerplate to:
 
 ```
 "dependencies": {
@@ -30,4 +35,14 @@ On _backend_ i change dependencies from my boilerplate to:
   "koa-router": "^7.3.0",
   "mongoose": "^5.0.0-rc0"
 }
+```
+
+Now install `npm i graphql`
+
+Create these folders in src:
+
+```
+|-- /src/
+    |-- /types/
+    |-- /model/
 ```

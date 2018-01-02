@@ -51,6 +51,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
+    "graphql": "^0.12.3",
     "koa": "^2.4.1",
     "koa-graphql": "^0.7.3",
     "koa-router": "^7.3.0",
