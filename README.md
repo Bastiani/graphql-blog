@@ -7,7 +7,7 @@ The _frontend_ is created with create-react-app and _backend_ with my [boilerpla
 
 Ok let's go!
 
-_frontend_ steps:
+## 1 - _frontend_ steps:
 
 install:
 
@@ -24,7 +24,7 @@ Create file `.babelrc` and insert:
 }
 ```
 
-_backend_ steps:
+## 2 - _backend_ steps:
 
 i change dependencies from my boilerplate to:
 
@@ -46,3 +46,15 @@ Create these folders in src:
     |-- /types/
     |-- /model/
 ```
+
+Start creating new file in _model_ folder calling [Post.js](https://github.com/Bastiani/graphql-blog/blob/master/backend/src/model/Post.js)
+
+Now create [Post.js](https://github.com/Bastiani/graphql-blog/blob/master/backend/src/types/Post.js) in a folder _types_
+
+### 2.1 - Types
+
+* Documentation for [Types and Schemas](http://graphql.org/learn/schema/)
+
+* GraphQL-JS documentation for this implementation of types [Type API Reference](http://graphql.org/graphql-js/type/)
+
+`const Post = new GraphQLObjectType` [GraphQLObjectType](http://graphql.org/graphql-js/type/#graphqlobjecttype)
