@@ -51,9 +51,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
     "koa": "^2.4.1",
-    "koa-body": "^2.5.0",
     "koa-graphql": "^0.7.3",
     "koa-router": "^7.3.0",
     "mongoose": "^5.0.0-rc0"
