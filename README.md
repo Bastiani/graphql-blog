@@ -108,13 +108,13 @@ Create _interface_, _connection_ and _mutation_ folder:
     |-- /model/
 ```
 
-Create _Node.js_ file in _interface_ folder.
+Create [_Node.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-be755561d175ec24fcc98d6920a243c6) file in _interface_ folder.
 
 [Explanation of nodeDefinitions](https://stackoverflow.com/questions/42576581/what-is-nodeinterface-nodefield-and-nodedefinitions-in-relay)
 
-Create _PostConnection.js_ file in _connection_ folder.
-Create _PostMutation.js_ file in _mutation_ folder.
+Create [_PostConnection.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-c3e45187de3deca2b1cf20119a682ab7) file in _connection_ folder.
+Create [_PostMutation.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-0e986dc1894e8d7e1a52003e736d02bc) file in _mutation_ folder.
 
 [Explanation of mutation](https://github.com/graphql/graphql-relay-js#mutations)
 
-Alter _Post.js_ type, _Mutation.js_ and _Query.js_ for adaptating to Relay
+Alter [_Post.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-58aca297af800fe781e3fdb3b142c5e7) type, [_Mutation.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-7243d2b3f50d4a6d0dc47097f7fddddd) and [_Query.js_](https://github.com/Bastiani/graphql-blog/commit/2a19140be5dc1c46f75c8bf45927e8cd32683771#diff-49f7a27537317722592284f11a359c93) for adaptating to Relay
