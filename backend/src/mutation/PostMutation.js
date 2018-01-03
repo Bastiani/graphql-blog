@@ -15,13 +15,17 @@ export default mutationWithClientMutationId({
       type: Post,
       resolve: ({ post }) => post,
     },
+    error: {
+      type: GraphQLString,
+      resolve: ({ error }) => error,
+    },
   },
   mutateAndGetPayload: async ({ title, content }) => {
     try {
       const post = await PostModel({ title, content }).save();
       return { post };
-    } catch (err) {
-      return err;
+    } catch (error) {
+      return { error };
     }
   },
 });
