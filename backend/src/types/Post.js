@@ -1,13 +1,17 @@
-import { GraphQLObjectType, GraphQLNonNull, GraphQLString, GraphQLID } from 'graphql';
+import { GraphQLObjectType, GraphQLString } from 'graphql';
+import { globalIdField } from 'graphql-relay';
 
-const Post = new GraphQLObjectType({
+import { NodeInterface } from '../interface/Node';
+
+export default new GraphQLObjectType({
   name: 'Post',
   description: 'Post type definition',
   fields: {
-    id: {
-      type: new GraphQLNonNull(GraphQLID),
-      description: 'ID of the post',
-      resolve: post => post.id,
+    id: globalIdField('Post'),
+    _id: {
+      type: GraphQLString,
+      // eslint-disable-next-line
+      resolve: post => post._id,
     },
     title: {
       type: GraphQLString,
@@ -20,6 +24,5 @@ const Post = new GraphQLObjectType({
       resolve: post => post.content,
     },
   },
+  interfaces: () => [NodeInterface],
 });
-
-export default Post;

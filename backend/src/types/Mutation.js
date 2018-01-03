@@ -1,27 +1,11 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+import { GraphQLObjectType } from 'graphql';
 
-import Post from './Post';
-import PostModel from '../model/Post';
+import PostMutation from '../mutation/PostMutation';
 
-const Mutation = new GraphQLObjectType({
+export default new GraphQLObjectType({
   name: 'Mutation',
   description: 'Mutation interface for our blog',
   fields: {
-    createPost: {
-      type: Post,
-      args: {
-        title: {
-          type: GraphQLString,
-          description: 'Title of the post',
-        },
-        content: {
-          type: GraphQLString,
-          description: 'Content of the post',
-        },
-      },
-      resolve: (_, args) => PostModel({ title: args.title, content: args.content }).save(),
-    },
+    createPost: PostMutation,
   },
 });
-
-export default Mutation;
