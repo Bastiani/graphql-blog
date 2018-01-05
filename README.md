@@ -174,17 +174,17 @@ Create file `.babelrc` and insert:
 
 Run this command in frontend folder with backend running `get-graphql-schema http://localhost:5000/graphql > src/schema.graphql`
 
-Alter _index.js_:
+Alter [_index.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-8bb2a92dc6971eaea17cc24e58d7058f):
 
 * [More about React Router v4](https://medium.com/@bastiani/react-router-4-e6c608deb88c)
 * [BrowserRouter](https://reacttraining.com/react-router/web/api/BrowserRouter)
 * [Switch](https://reacttraining.com/react-router/web/api/Switch)
 
-Alter _App.js_:
+Alter [_App.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-48bb2e3e3e5708d8083b1cff1fff3949):
 
 * [query-renderer](https://facebook.github.io/relay/docs/en/query-renderer.html)
 
-Create _Environment.js_:
+Create [_Environment.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-fecc0fcadf7b48388348fcfea7b2929a):
 
 * [relay-environment](https://facebook.github.io/relay/docs/en/relay-environment.html)
 * [network-layer](https://facebook.github.io/relay/docs/en/network-layer.html)
@@ -197,16 +197,16 @@ Create folders:
     |-- /components/
 ```
 
-In _mutations_ folder, create file _CreatePostMutation.js_:
+In _mutations_ folder, create file [_CreatePostMutation.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-446d3a184397729070afe1b80640edb5):
 
 * [mutations, updater and optimisticUpdater](https://facebook.github.io/relay/docs/en/mutations.html#using-updater-and-optimisticupdater)
 
 In _components_ folder, create:
 
-* _Post.js_
+* [_Post.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-8db7c5f64964eba84f1ec4cd5cfd5071)
   [fragment-container](https://facebook.github.io/relay/docs/en/fragment-container.html)
-* _ListPage.js_
-* _CreatePost.js_
+* [_ListPage.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-381cc740efec838abb8a1ba2e0d81742)
+* [_CreatePost.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-0ea403c84ce51c7f2d3b80ba0cfba5ed)
 
 Run this in frontend folder `./node_modules/.bin/relay-compiler --src ./src/ --schema ./src/schema.graphql`
 
