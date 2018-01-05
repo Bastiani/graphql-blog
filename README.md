@@ -148,7 +148,7 @@ query allPosts {
 
 Changes to the frontend Relay Modern:
 
-* _Query.js_
+* [_Query.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-49f7a27537317722592284f11a359c93)
 
 ## 2 - _frontend_ steps:
 
@@ -211,3 +211,5 @@ In _components_ folder, create:
 Run this in frontend folder `./node_modules/.bin/relay-compiler --src ./src/ --schema ./src/schema.graphql`
 
 Run `yarn start` and test!
+
+![](https://raw.githubusercontent.com/Bastiani/graphql-blog/master/graphql.gif)
