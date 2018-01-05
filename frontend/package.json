@@ -3,19 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-plugin-relay": "^1.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.1.10",
     "react-relay": "^1.4.1",
-    "react-scripts": "1.0.17"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "relay-runtime": "^1.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "build": "node ./setup && react-scripts build",
+    "test": "node ./setup && react-scripts test --env=jsdom",
+    "start": "node ./setup && react-scripts start",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-plugin-relay": "^1.4.1",
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",

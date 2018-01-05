@@ -1,0 +1,86 @@
+input CreatePostInput {
+  title: String!
+  content: String!
+  clientMutationId: String
+}
+
+type CreatePostPayload {
+  post: Post
+  error: String
+  clientMutationId: String
+}
+
+# Mutation interface for our blog
+type Mutation {
+  createPost(input: CreatePostInput!): CreatePostPayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# Information about pagination in a connection.
+type PageInfo {
+  # When paginating forwards, are there more items?
+  hasNextPage: Boolean!
+
+  # When paginating backwards, are there more items?
+  hasPreviousPage: Boolean!
+
+  # When paginating backwards, the cursor to continue.
+  startCursor: String
+
+  # When paginating forwards, the cursor to continue.
+  endCursor: String
+}
+
+# Post type definition
+type Post implements Node {
+  # The ID of an object
+  id: ID!
+  _id: String
+
+  # Title of the post
+  title: String
+
+  # Content of the post
+  content: String
+}
+
+# A connection to a list of items.
+type PostConnection {
+  # Information to aid in pagination.
+  pageInfo: PageInfo!
+
+  # A list of edges.
+  edges: [PostEdge]
+}
+
+# An edge in a connection.
+type PostEdge {
+  # The item at the end of the edge
+  node: Post
+
+  # A cursor for use in pagination
+  cursor: String!
+}
+
+# Query interface for our blog
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+
+  # Viewer pattern implementation
+  viewer: Viewer!
+}
+
+type Viewer {
+  allPosts(after: String, first: Int, before: String, last: Int): PostConnection!
+  id: ID!
+}
+

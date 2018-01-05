@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const database = () =>
   new Promise((resolve, reject) => {
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://localhost/graphql-blog', { useMongoClient: true });
+    mongoose.connect('mongodb://localhost/graphql-blog');
 
     const db = mongoose.connection;
     db.on('error', () => {

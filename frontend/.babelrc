@@ -1,5 +1,4 @@
 {
-  "plugins": [
-    "relay"
-  ]
+  "passPerPreset": true,
+  "plugins": ["relay"]
 }
