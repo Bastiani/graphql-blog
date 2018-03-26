@@ -208,6 +208,8 @@ In _components_ folder, create:
 * [_ListPage.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-381cc740efec838abb8a1ba2e0d81742)
 * [_CreatePost.js_](https://github.com/Bastiani/graphql-blog/commit/650dc432a366d7b74353eedff9640fed1715a711#diff-0ea403c84ce51c7f2d3b80ba0cfba5ed)
 
+`@connection` https://blog.graph.cool/getting-started-with-relay-modern-46f8de6bd6ec
+
 Run this in frontend folder `./node_modules/.bin/relay-compiler --src ./src/ --schema ./src/schema.graphql`
 
 Run `yarn start` and test!
